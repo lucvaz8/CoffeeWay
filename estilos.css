@@ -1,0 +1,75 @@
+.background{
+  background-image: url(https://images8.alphacoders.com/902/thumb-1920-902013.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  
+
+.form-register {
+  box-sizing: border-box;
+  width: 500px;
+  background-color: #4d2b1e;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  border-radius: 0.2cm;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  align-items: center;
+  box-shadow: 7px 13px 37px #000;
+  text-align: center; }
+
+.titulo-formulario, .titulo-formulario1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  text-align: center;
+  text-transform: uppercase; }
+
+.titulo-formulario1 {
+  color: black; }
+
+.controls {
+  width: 90%;
+  background: #383535;
+  padding: 10px;
+  border-radius: 0.2cm;
+  margin-bottom: 16px;
+  border: 1px solid white;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 1s; }
+  .controls:focus {
+    font-size: 18px;
+    width: 95%; }
+
+.form-btn {
+  width: 75%;
+  color: white;
+  border: solid white;
+  padding: 12px;
+  margin: 5px;
+  font-size: 12px;
+  color: black;
+  border-radius: 0.2cm;
+  cursor: pointer;
+  transition: all 0.7s;
+  outline: none; }
+  .form-btn:hover {
+    box-shadow: inset 10cm 0 0 0 #9b8f8f;
+    cursor: pointer; }
+
+@media screen and (max-width: 480px) {
+  .form-register{
+    width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: auto; }
+}
