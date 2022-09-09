@@ -18,11 +18,11 @@ carrito.push (prod1, prod2, prod3, prod4, prod5)
 
 let cantidadcafe = document.getElementById("cantidadcafe")
 let tipocafe = document.getElementById("tipocafe")
-let comprar = document.getElementById ("form")
+/*let comprar = document.getElementById ("form")*/
 
 cantidadcafe.addEventListener("input",calc)
 tipocafe.addEventListener ("change",switchC)
-comprar.addEventListener ("submit",compracliente)
+/*comprar.addEventListener ("submit",compracliente)*/
 
 function calc(){
     let amount  = document.getElementById ("cantidadcafe").value
@@ -42,12 +42,50 @@ function switchC(){
     let compute = amount * rate
     document.getElementById ("totalcompra").value = compute
 }
-
+/*
 function compracliente (e){
     e.preventdefault();
     let datos = e.target
     console.log(datos.children[6].value)
 }
+*/
 
+//Aplicacion de LocalStorage y JSON
 const guardarLocal = (clave,valor) => {localStorage.setItem(clave,valor)};
 guardarLocal("listaCafe",JSON.stringify(carrito));
+
+//Aplicando Libreria - Toastify
+
+const btn = document.getElementById("agregarcarrito")
+btn.addEventListener ("click", notificacion)
+
+function notificacion(){
+    Toastify({
+        text: "Agregado al carrito",
+        duration: 2500,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #4d2b1e, #9b8f8f)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
+}
+
+//Aplicando Libreria - Sweet Alert
+
+const comprar = document.getElementById("comprar")
+comprar.addEventListener ("click", notificacioncomprar)
+
+function notificacioncomprar(){
+    swal("Ingresa tu nombre para registrar el pedido:", {
+        content: "input",
+      })
+      .then((value) => {
+        swal(`Tu pedido se ha registrado a nombre de: ${value}.`);
+      });
+}
