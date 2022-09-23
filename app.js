@@ -1,4 +1,4 @@
-
+/*
 class Menu {
     constructor(nombre, precio){
         this.nombre = nombre;
@@ -19,7 +19,7 @@ carrito.push (prod1, prod2, prod3, prod4, prod5)
 let cantidadcafe = document.getElementById("cantidadcafe")
 let tipocafe = document.getElementById("tipocafe")
 /*let comprar = document.getElementById ("form")*/
-
+/*
 cantidadcafe.addEventListener("input",calc)
 tipocafe.addEventListener ("change",switchC)
 /*comprar.addEventListener ("submit",compracliente)*/
@@ -34,7 +34,7 @@ function calc(){
     document.getElementById ("totalcompra").value = compute  
     }
 }
-
+/*
 function switchC(){
     let amount  = document.getElementById ("cantidadcafe").value
     let rate = document.getElementById ("tipocafe").value
@@ -42,6 +42,7 @@ function switchC(){
     let compute = amount * rate
     document.getElementById ("totalcompra").value = compute
 }
+
 /*
 function compracliente (e){
     e.preventdefault();
@@ -49,7 +50,7 @@ function compracliente (e){
     console.log(datos.children[6].value)
 }
 */
-
+/*
 //Aplicacion de LocalStorage y JSON
 const guardarLocal = (clave,valor) => {localStorage.setItem(clave,valor)};
 guardarLocal("listaCafe",JSON.stringify(carrito));
@@ -76,8 +77,9 @@ function notificacion(){
       }).showToast();
 }
 
+*/
 //Aplicando Libreria - Sweet Alert
-
+/*
 const comprar = document.getElementById("comprar")
 comprar.addEventListener ("click", notificacioncomprar)
 
@@ -89,3 +91,19 @@ function notificacioncomprar(){
         swal(`Tu pedido se ha registrado a nombre de: ${value}.`);
       });
 }
+
+//utilizando fetch en el proyecto metodo get
+*/
+const lista = document.getElementById ("lista")
+
+fetch ('https://api.sampleapis.com/coffee/hot')
+    .then((res) =>res.json())
+    .then ((data)=>data.forEach ((info)=>{
+        const li = document.createElement("li")
+        li.innerHTML = `
+        <h2>Coffee Type: ${info.title}</h2>
+        <p>Despcription: ${info.description}</p>
+        <p>Ingredients: ${info.ingredients}</p>
+        `
+        lista.append(li)
+    }))

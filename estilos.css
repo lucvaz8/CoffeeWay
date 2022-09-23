@@ -4,7 +4,35 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
-  
+
+.background-diccionario{
+    background-image: url(https://img.freepik.com/premium-photo/recycled-crumpled-light-brown-paper-texture-paper-background-design-with-copy-space_9635-1915.jpg?w=1800);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+.encabezado{
+  background-color: black;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  align-items: center;
+  width: 100%;
+  box-shadow: 7px 13px 37px #000;
+  text-align: right;
+  padding:10px;
+  margin-top: auto;
+  text-decoration: none;} 
+
+.lista{
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+  color: rgb(124, 66, 28);
+  text-align: center;
+  text-transform: uppercase;
+  list-style: none;}
 
 .form-register {
   box-sizing: border-box;
@@ -65,7 +93,6 @@
   .form-btn:hover {
     box-shadow: inset 10cm 0 0 0 #9b8f8f;
     cursor: pointer; }
-
 @media screen and (max-width: 480px) {
   .form-register{
     width: auto;
